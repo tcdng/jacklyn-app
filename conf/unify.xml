@@ -43,6 +43,7 @@
 		<property name="application.web.document.stylesheet">
 			<value>$t{css/jacklyn.css}</value>
 		</property>
+		<property name="application.banner" value="web/banner/banner.txt" />
 	</properties>
 
 	<!-- COMPONENTS -->
