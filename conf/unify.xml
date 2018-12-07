@@ -16,6 +16,7 @@
   the License.
 -->
 
+<!-- Configuration for Unify Container -->
 <unify nodeId="node-001" production="false" cluster="false"
 	version="1.0.0">
 	<!-- CONFIGURATION -->
@@ -23,6 +24,7 @@
 		<property name="application.code" value="jacklyn" />
 		<property name="application.name" value="Jacklyn Codebase" />
 		<property name="application.boot.component" value="jacklyn-bootmodule" />
+		<property name="application.logger.toconsole" value="false" />
 		<property name="application.logger.level" value="info" />
 		<property name="application.layout">
 			<value>luna</value>
@@ -32,12 +34,13 @@
 		<property name="application.interfaces">
 			<value>jetty-httpinterface</value>
 		</property>
-		<property name="application.remote.viewing.enabled" value="true" />
-		<property name="application.remote.viewers">
+		<property name="application.web.home" value="/application/home" />
+		<property name="application.web.remote.viewing.enabled" value="true" />
+		<property name="application.web.remote.viewers">
 			<value>http://localhost:7010</value>
 		</property>
-		<property name="application.session.timeout" value="900" />
-		<property name="application.document.stylesheet">
+		<property name="application.web.session.timeout" value="900" />
+		<property name="application.web.document.stylesheet">
 			<value>$t{css/jacklyn.css}</value>
 		</property>
 	</properties>
