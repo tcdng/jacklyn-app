@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unify>
+<unify nodeId="node-001" production="false" cluster="false"
+	version="1.1.1">
+	<!-- CONFIGURATION -->
+	<properties>
+		<property name="application.code" value="jacklyn" />
+		<property name="application.name" value="Jacklyn Codebase" />
+		<property name="application.boot.component" value="jacklyn-bootmodule" />
+		<property name="application.logger.level" value="info" />
+		<property name="application.layout">
+			<value>luna</value>
+		</property>
+		<property name="application.command.interface.enabled" value="true" />
+		<property name="application.command.interface.port" value="7081" />
+		<property name="application.interfaces">
+			<value>jetty-httpinterface</value>
+		</property>
+		<property name="application.remote.viewing.enabled" value="true" />
+		<property name="application.remote.viewers">
+			<value>http://localhost:7010</value>
+		</property>
+		<property name="application.session.timeout" value="900" />
+		<property name="application.document.stylesheet">
+			<value>$t{css/jacklyn.css}</value>
+		</property>
+	</properties>
+
+	<!-- COMPONENTS -->
+	<components>
+		<!-- Configure HTTP interface -->
+		<component name="jetty-httpinterface"
+			class="com.tcdng.unify.jetty.http.JettyHttpInterface">
+			<properties>
+				<property name="contextPath" value="/jacklyn" />
+				<property name="httpPort" value="7080" />
+			</properties>
+		</component>
+		<!-- Application data source -->
+		<component name="application-datasource"
+			class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+			<properties>
+				<property name="driver" value="org.hsqldb.jdbcDriver" />
+				<property name="connectionUrl" value="jdbc:hsqldb:mem:test" />
+				<property name="getConnectionTimeout" value="1000" />
+				<property name="shutdownOnTerminate" value="true" />
+				<property name="dialect" value="hsqldb-dialect" />
+			</properties>
+		</component>
+	</components>
+</unify>
