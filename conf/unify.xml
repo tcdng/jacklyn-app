@@ -23,7 +23,7 @@
 	<properties>
 		<property name="application.code" value="jacklyn" />
 		<property name="application.name" value="Jacklyn Codebase" />
-		<property name="application.boot.component" value="jacklyn-bootmodule" />
+		<property name="application.boot.component" value="jacklyn-bootservice" />
 		<property name="application.logger.toconsole" value="false" />
 		<property name="application.logger.level" value="info" />
 		<property name="application.layout">
