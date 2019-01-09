@@ -4,7 +4,7 @@
 
 	<groupId>com.tcdng.jacklyn</groupId>
 	<artifactId>jacklyn-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>jacklyn-app</name>
@@ -30,7 +30,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.version>0.0.1-SNAPSHOT</project.version>
+        <project.version>1.0.0-SNAPSHOT</project.version>
+        <unify.version>1.0.0</unify.version>
 	</properties>
 
 	<build>
@@ -55,6 +56,13 @@
 			</plugin>
 		</plugins>
 	</build>
+    <!-- Temporary staging -->
+    <repositories>
+        <repository>
+            <id>sonatype-staging-repo</id>
+            <url>https://oss.sonatype.org/content/repositories/comtcdng-1002</url>
+        </repository>
+    </repositories>
 
 	<dependencies>
 		<!-- Main dependencies -->
@@ -100,19 +108,19 @@
 		</dependency>
 		<dependency>
 			<groupId>com.tcdng.jacklyn</groupId>
-			<artifactId>jacklyn-service</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tcdng.jacklyn</groupId>
 			<artifactId>jacklyn-shared</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.tcdng.jacklyn</groupId>
-			<artifactId>jacklyn-system</artifactId>
-			<version>${project.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>com.tcdng.jacklyn</groupId>
+            <artifactId>jacklyn-statistics</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tcdng.jacklyn</groupId>
+            <artifactId>jacklyn-system</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>com.tcdng.jacklyn</groupId>
 			<artifactId>jacklyn-workflow</artifactId>
@@ -121,27 +129,27 @@
 		<dependency>
 			<groupId>com.tcdng.unify</groupId>
 			<artifactId>unify-core</artifactId>
-			<version>${project.version}</version>
+			<version>${unify.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.tcdng.unify</groupId>
 			<artifactId>unify-web</artifactId>
-			<version>${project.version}</version>
+			<version>${unify.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.tcdng.unify</groupId>
 			<artifactId>unify-jetty</artifactId>
-			<version>${project.version}</version>
+			<version>${unify.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.tcdng.unify</groupId>
 			<artifactId>unify-jasperreports</artifactId>
-			<version>${project.version}</version>
+			<version>${unify.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.tcdng.unify</groupId>
 			<artifactId>unify-jcifs</artifactId>
-			<version>${project.version}</version>
+			<version>${unify.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hsqldb</groupId>
