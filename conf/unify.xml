@@ -21,8 +21,8 @@
 	version="1.0.0">
 	<!-- CONFIGURATION -->
 	<properties>
-		<property name="application.code" value="jacklyn" />
-		<property name="application.name" value="Jacklyn Codebase" />
+		<property name="application.code" value="jacklyn-app" />
+		<property name="application.name" value="Jacklyn Application" />
 		<property name="application.boot.component" value="jacklyn-bootservice" />
 		<property name="application.logger.toconsole" value="false" />
 		<property name="application.logger.level" value="info" />
@@ -57,15 +57,29 @@
 			</properties>
 		</component>
 		<!-- Application data source -->
-		<component name="application-datasource"
-			class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
-			<properties>
-				<property name="driver" value="org.hsqldb.jdbcDriver" />
-				<property name="connectionUrl" value="jdbc:hsqldb:mem:test" />
-				<property name="getConnectionTimeout" value="1000" />
-				<property name="shutdownOnTerminate" value="true" />
-				<property name="dialect" value="hsqldb-dialect" />
-			</properties>
-		</component>
+        <component name="application-datasource"
+            class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+            <properties>
+                <property name="driver" value="org.hsqldb.jdbcDriver" />
+                <property name="connectionUrl" value="jdbc:hsqldb:mem:test" />//
+                <property name="appSchema" value="PUBLIC" />
+                <property name="getConnectionTimeout" value="4000" />
+                <property name="shutdownOnTerminate" value="true" />
+                <property name="dialect" value="hsqldb-dialect" />
+            </properties>
+        </component>
+        <!--component name="application-datasource"
+            class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+            <properties>
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="connectionUrl" value="jdbc:mysql://localhost:3306/<DATABASE>" />//
+                <property name="appSchema" value="<DATABASE>" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
+                <property name="getConnectionTimeout" value="4000" />
+                <property name="shutdownOnTerminate" value="true" />
+                <property name="dialect" value="mysql-dialect" />
+            </properties>
+        </component-->
 	</components>
 </unify>
