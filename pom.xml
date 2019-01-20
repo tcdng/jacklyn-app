@@ -30,8 +30,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jacklyn.version>1.0.0</jacklyn.version>
-		<unify.version>1.0.1</unify.version>
+		<jacklyn.version>1.0.1-SNAPSHOT</jacklyn.version>
+		<unify.version>1.0.2-SNAPSHOT</unify.version>
 	</properties>
 
 	<build>
