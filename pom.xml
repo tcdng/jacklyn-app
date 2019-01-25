@@ -30,8 +30,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jacklyn.version>1.0.1</jacklyn.version>
-		<unify.version>1.0.2</unify.version>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<jacklyn.version>1.0.2-SNAPSHOT</jacklyn.version>
+		<unify.version>1.0.3-SNAPSHOT</unify.version>
 	</properties>
 
 	<build>
@@ -46,7 +48,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-                            <finalName>jacklyn-app-starter-${project.version}</finalName>
+							<finalName>jacklyn-app-starter-${project.version}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
 								<descriptor>assembly.xml</descriptor>
