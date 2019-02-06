@@ -34,7 +34,8 @@
 		<property name="application.interfaces">
 			<value>jetty-httpinterface</value>
 		</property>
-		<property name="application.web.home" value="/application/home" />
+        <property name="application.web.home" value="/application/home" />
+        <property name="application.web.common.utilities" value="/application/commonutilities" />
 		<property name="application.web.remote.viewing.enabled" value="true" />
 		<property name="application.web.remote.viewers">
 			<value>http://localhost:7010</value>
