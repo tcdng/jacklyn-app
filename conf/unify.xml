@@ -32,7 +32,7 @@
 		<property name="application.command.interface.enabled" value="true" />
 		<property name="application.command.interface.port" value="7081" />
 		<property name="application.interfaces">
-			<value>jetty-httpinterface</value>
+			<value>jetty-embeddedwebserver</value>
 		</property>
         <property name="application.web.home" value="/application/home" />
         <property name="application.web.common.utilities" value="/application/commonutilities" />
@@ -50,8 +50,8 @@
 	<!-- COMPONENTS -->
 	<components>
 		<!-- Configure HTTP interface -->
-		<component name="jetty-httpinterface"
-			class="com.tcdng.unify.jetty.http.JettyHttpInterface">
+		<component name="jetty-embeddedwebserver"
+			class="com.tcdng.unify.jetty.http.JettyEmbeddedWebServer">
 			<properties>
 				<property name="contextPath" value="/jacklyn" />
 				<property name="httpPort" value="7080" />
