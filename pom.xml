@@ -114,6 +114,11 @@
 		</dependency>
 		<dependency>
 			<groupId>com.tcdng.jacklyn</groupId>
+			<artifactId>jacklyn-integration</artifactId>
+			<version>${jacklyn.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tcdng.jacklyn</groupId>
 			<artifactId>jacklyn-system</artifactId>
 			<version>${jacklyn.version}</version>
 		</dependency>
@@ -161,6 +166,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>6.1.0.jre7</version>
 		</dependency>
 	</dependencies>
 </project>
