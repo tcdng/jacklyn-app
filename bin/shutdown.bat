@@ -14,6 +14,6 @@ rem License for the specific language governing permissions and limitations unde
 rem the License.
 
 rem Shutdown instance
-start java -cp "lib/*" com.tcdng.unify.core.Unify shutdown -h localhost -p 7081
+java -cp "lib/*" com.tcdng.unify.core.Unify shutdown -h localhost -p 7081
 
 pause
