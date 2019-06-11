@@ -18,14 +18,16 @@
 
 <!-- Configuration for Unify Container -->
 <unify nodeId="node-001" production="false" cluster="false"
-	version="1.0.0">
+	version="1.0.2">
 	<!-- CONFIGURATION -->
 	<properties>
 		<property name="application.code" value="jacklyn-app" />
-		<property name="application.name" value="Jacklyn Application" />
+        <property name="application.name" value="Jacklyn Application" />
+        <!--property name="application.locale" value="en-GB" /-->
+        <!--property name="application.timezone" value="Africa/Lagos" /-->
 		<property name="application.boot.component" value="jacklyn-bootservice" />
-		<property name="application.logger.toconsole" value="false" />
-		<property name="application.logger.level" value="info" />
+		<property name="application.logger.toconsole" value="true" />
+		<property name="application.logger.level" value="debug" />
 		<property name="application.layout">
 			<value>luna</value>
 		</property>
@@ -38,7 +40,8 @@
         <property name="application.web.common.utilities" value="/application/commonutilities" />
 		<property name="application.web.remote.viewing.enabled" value="true" />
 		<property name="application.web.remote.viewers">
-			<value>http://localhost:7010</value>
+            <value>http://localhost:7010</value>
+            <value>http://192.168.56.101:7010</value>
 		</property>
 		<property name="application.web.session.timeout" value="900" />
 		<property name="application.web.document.stylesheet">
@@ -62,7 +65,7 @@
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
                 <property name="driver" value="org.hsqldb.jdbcDriver" />
-                <property name="connectionUrl" value="jdbc:hsqldb:mem:test" />//
+                <property name="connectionUrl" value="jdbc:hsqldb:mem:test" />
                 <property name="appSchema" value="PUBLIC" />
                 <property name="getConnectionTimeout" value="4000" />
                 <property name="shutdownOnTerminate" value="true" />
@@ -75,9 +78,20 @@
                 <property name="driver" value="org.hsqldb.jdbcDriver" />
                 <property name="connectionUrl" value="jdbc:hsqldb:hsql://localhost/jacklyndb" />
                 <property name="appSchema" value="PUBLIC" />
-                <property name="username" value="<USERNAME>" />
-                <property name="password" value="<PASSWORD>" />
+                <property name="username" value="SA" />
+                <property name="password" value="" />
                 <property name="dialect" value="hsqldb-dialect" />
+            </properties>
+        </component-->
+        <!--component name="application-datasource"
+            class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+            <properties>
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+                <property name="connectionUrl" value="jdbc:sqlserver://192.168.56.1\SQLEXPRESS:57565" />
+                <property name="appSchema" value="dbo" />
+                <property name="username" value="sa" />
+                <property name="password" value="gateway10" />
+                <property name="dialect" value="mssql-dialect" />
             </properties>
         </component-->
         <!--component name="application-datasource"
