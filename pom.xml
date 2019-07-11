@@ -117,11 +117,16 @@
 			<artifactId>jacklyn-integration</artifactId>
 			<version>${jacklyn.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.tcdng.jacklyn</groupId>
-			<artifactId>jacklyn-system</artifactId>
-			<version>${jacklyn.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>com.tcdng.jacklyn</groupId>
+            <artifactId>jacklyn-system</artifactId>
+            <version>${jacklyn.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tcdng.jacklyn</groupId>
+            <artifactId>jacklyn-location</artifactId>
+            <version>${jacklyn.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>com.tcdng.jacklyn</groupId>
 			<artifactId>jacklyn-workflow</artifactId>

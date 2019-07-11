@@ -18,7 +18,7 @@
 
 <!-- Configuration for Unify Container -->
 <unify nodeId="node-001" production="false" cluster="false"
-	version="1.0.2">
+	version="1.0.3">
 	<!-- CONFIGURATION -->
 	<properties>
 		<property name="application.code" value="jacklyn-app" />
