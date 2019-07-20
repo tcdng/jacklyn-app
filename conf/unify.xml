@@ -48,6 +48,8 @@
 			<value>$t{css/jacklyn.css}</value>
 		</property>
 		<property name="application.banner" value="web/banner/banner.txt" />
+        <property name="jacklyn.system.default.email" value="info@tcdng.com" />
+        <property name="jacklyn.administrator.default.email" value="info@tcdng.com" />
 	</properties>
 
 	<!-- COMPONENTS -->
