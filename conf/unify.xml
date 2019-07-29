@@ -44,9 +44,12 @@
             <value>http://192.168.56.101:7010</value>
 		</property>
 		<property name="application.web.session.timeout" value="900" />
-		<property name="application.web.document.stylesheet">
-			<value>$t{css/jacklyn.css}</value>
-		</property>
+        <property name="application.web.document.stylesheet">
+            <value>$t{css/jacklyn.css}</value>
+        </property>
+        <property name="application.web.document.script">
+            <value>web/js/jacklyn-web.js</value>
+        </property>
 		<property name="application.banner" value="web/banner/banner.txt" />
         <property name="jacklyn.system.default.email" value="info@tcdng.com" />
         <property name="jacklyn.administrator.default.email" value="info@tcdng.com" />
