@@ -29,7 +29,8 @@
 		<property name="application.logger.toconsole" value="true" />
 		<property name="application.logger.level" value="debug" />
 		<property name="application.layout">
-			<value>luna</value>
+            <value>luna</value>
+            <value>europa</value>
 		</property>
 		<property name="application.command.interface.enabled" value="true" />
 		<property name="application.command.interface.port" value="7081" />
