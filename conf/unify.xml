@@ -116,10 +116,10 @@
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
                 <property name="driver" value="org.postgresql.Driver" />
-                <property name="connectionUrl" value="jdbc:postgresql://localhost:5432/jacklyndb" />
+                <property name="connectionUrl" value="jdbc:postgresql://localhost:5432/<DATABASE>" />
                 <property name="appSchema" value="public" />
-                <property name="username" value="jacklyn" />
-                <property name="password" value="secret" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
                 <property name="getConnectionTimeout" value="4000" />
                 <property name="dialect" value="postgresql-dialect" />
             </properties>
