@@ -26,5 +26,5 @@ rem In future should be able to pass it as batch file argument
 set "WORKING_FOLDER=%JACKLYN_HOME%"
 
 rem Start instance
-java -Xmx128m -Xms128m -cp "lib/*" com.tcdng.unify.core.Unify %START_OPERATION% -w %WORKING_FOLDER%
+java -Xmx128m -Xms128m -cp "WEB-INF/lib/*" com.tcdng.unify.core.Unify %START_OPERATION% -w %WORKING_FOLDER%
 

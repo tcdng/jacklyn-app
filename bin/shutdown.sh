@@ -12,5 +12,5 @@
 # Contributor: Johnson Eyo <johnsoneyo@gmail.com>
 
 # Shutdown Instance
-java -cp "lib/*" com.tcdng.unify.core.Unify shutdown -h localhost -p 7081
+java -cp "WEB-INF/lib/*" com.tcdng.unify.core.Unify shutdown -h localhost -p 7081
 

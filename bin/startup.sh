@@ -25,4 +25,4 @@ export WORKING_FOLDER=JACKLYN_HOME
 
 
 # Start instance
-java -Xmx128m -Xms128m -cp "lib/*" com.tcdng.unify.core.Unify $START_OPERATION -w $WORKING_FOLDER
+java -Xmx128m -Xms128m -cp "WEB-INF/lib/*" com.tcdng.unify.core.Unify $START_OPERATION -w $WORKING_FOLDER

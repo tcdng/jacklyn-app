@@ -52,6 +52,7 @@
             <value>web/js/jacklyn-web.js</value>
         </property>
 		<property name="application.banner" value="web/banner/banner.txt" />
+        <!--property name="jacklyn.country.locale" value="en-NG" /-->
         <property name="jacklyn.system.default.email" value="info@tcdng.com" />
         <property name="jacklyn.administrator.default.email" value="info@tcdng.com" />
 	</properties>
@@ -82,10 +83,10 @@
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
                 <property name="driver" value="org.hsqldb.jdbcDriver" />
-                <property name="connectionUrl" value="jdbc:hsqldb:hsql://localhost/jacklyndb" />
+                <property name="connectionUrl" value="jdbc:hsqldb:hsql://<HOST>/<DATABASE>" />
                 <property name="appSchema" value="PUBLIC" />
-                <property name="username" value="SA" />
-                <property name="password" value="" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
                 <property name="dialect" value="hsqldb-dialect" />
             </properties>
         </component-->
@@ -93,10 +94,10 @@
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
                 <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-                <property name="connectionUrl" value="jdbc:sqlserver://192.168.56.1\SQLEXPRESS:57565" />
+                <property name="connectionUrl" value="jdbc:sqlserver://<HOST>\SQLEXPRESS:57565" />
                 <property name="appSchema" value="dbo" />
-                <property name="username" value="sa" />
-                <property name="password" value="gateway10" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
                 <property name="dialect" value="mssql-dialect" />
             </properties>
         </component-->
@@ -104,7 +105,7 @@
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="connectionUrl" value="jdbc:mysql://localhost:3306/<DATABASE>" />//
+                <property name="connectionUrl" value="jdbc:mysql://<HOST>:3306/<DATABASE>" />//
                 <property name="appSchema" value="<DATABASE>" />
                 <property name="username" value="<USERNAME>" />
                 <property name="password" value="<PASSWORD>" />
@@ -115,8 +116,19 @@
         <!--component name="application-datasource"
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
+                <property name="driver" value="oracle.jdbc.OracleDriver" />
+                <property name="connectionUrl" value="jdbc:oracle:thin:@//<HOST>:1521/<SID>" />
+                <property name="appSchema" value="<USERNAME>" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
+                <property name="dialect" value="oracle-dialect" />
+            </properties>
+        </component-->
+        <!--component name="application-datasource"
+            class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+            <properties>
                 <property name="driver" value="org.postgresql.Driver" />
-                <property name="connectionUrl" value="jdbc:postgresql://localhost:5432/<DATABASE>" />
+                <property name="connectionUrl" value="jdbc:postgresql://<HOST>:5432/<DATABASE>" />
                 <property name="appSchema" value="public" />
                 <property name="username" value="<USERNAME>" />
                 <property name="password" value="<PASSWORD>" />

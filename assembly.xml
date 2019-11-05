@@ -12,15 +12,18 @@
             <directory>${project.basedir}/bin</directory>
         </fileSet>
         <fileSet>
-            <directory>${project.basedir}/conf</directory>
+            <directory>${project.basedir}/web</directory>
         </fileSet>
         <fileSet>
-            <directory>${project.basedir}/web</directory>
+            <directory>${project.basedir}/WEB-INF/conf</directory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/WEB-INF/download</directory>
         </fileSet>
     </fileSets>
     <dependencySets>
         <dependencySet>
-            <outputDirectory>lib</outputDirectory>
+            <outputDirectory>WEB-INF/lib</outputDirectory>
         </dependencySet>
     </dependencySets>
 </assembly>
