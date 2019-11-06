@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE unify>
+<!DOCTYPE unify PUBLIC
+  "-//The Code Department//DTD Unify Container 2.0//EN"
+  "https://tcdng.com/dtd/unify-config_2_0.dtd">
 <!--
   Copyright 2018-2019 The Code Department.
   
