@@ -1,2 +1,2 @@
-## ![Jacklyn Application](web/images/applicationbanner.jpg?raw=true)
+## ![Jacklyn Application](web/images/applicationloginbanner.png?raw=true)
   Jacklyn starter application.
