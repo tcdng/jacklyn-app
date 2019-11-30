@@ -45,7 +45,6 @@
 		<property name="application.web.remote.viewing.enabled" value="true" />
 		<property name="application.web.remote.viewers">
             <value>http://localhost:7010</value>
-            <value>http://192.168.56.101:7010</value>
 		</property>
         <property name="application.web.document.stylesheet">
             <value>$t{css/jacklyn.css}</value>
