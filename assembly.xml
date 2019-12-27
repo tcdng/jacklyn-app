@@ -15,15 +15,15 @@
             <directory>${project.basedir}/web</directory>
         </fileSet>
         <fileSet>
-            <directory>${project.basedir}/WEB-INF/conf</directory>
+            <directory>${project.basedir}/conf</directory>
         </fileSet>
         <fileSet>
-            <directory>${project.basedir}/WEB-INF/download</directory>
+            <directory>${project.basedir}/download</directory>
         </fileSet>
     </fileSets>
     <dependencySets>
         <dependencySet>
-            <outputDirectory>WEB-INF/lib</outputDirectory>
+            <outputDirectory>lib</outputDirectory>
         </dependencySet>
     </dependencySets>
 </assembly>
