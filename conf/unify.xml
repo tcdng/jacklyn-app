@@ -41,15 +41,15 @@
 		</property>
         <property name="application.session.timeout" value="900" />
         <property name="application.web.home" value="/application/home" />
-        <property name="application.web.common.utilities" value="/application/commonutilities" />
-		<property name="application.web.remote.viewing.enabled" value="true" />
+        <property name="application.web.common" value="/application/commonutilities" />
+		<property name="application.web.remote.viewing" value="true" />
 		<property name="application.web.remote.viewers">
             <value>http://localhost:7010</value>
 		</property>
-        <property name="application.web.document.stylesheet">
+        <property name="application.web.stylesheet">
             <value>$t{css/jacklyn.css}</value>
         </property>
-        <property name="application.web.document.script">
+        <property name="application.web.script">
             <value>web/js/jacklyn-web.js</value>
         </property>
 		<property name="application.banner" value="web/banner/banner.txt" />
