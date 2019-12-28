@@ -3,6 +3,12 @@ This starter provides a project template for building applications using Jacklyn
 
 Uses in-memory HSQLDB as application database and utilizes port 7080 and 7081 for HTTP by default. You can change database and port settings in ...\WEB-INF\conf\unify.xml.
 
+## Build the Project
+
+```
+mvn clean package
+```
+
 ### Quick Run
 * Download an already assembled runnable package here.
 * Extract downloaded package to a suitable folder and run startup.bat or startup.sh in folder ..\bin
