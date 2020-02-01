@@ -27,6 +27,7 @@
         <property name="application.name" value="Jacklyn Application" />
         <!--property name="application.locale" value="en-GB" /-->
         <!--property name="application.timezone" value="Africa/Lagos" /-->
+        <!--property name="application.colorscheme" value="gray" /-->
 		<property name="application.boot.component" value="jacklyn-bootservice" />
 		<property name="application.logger.toconsole" value="true" />
 		<property name="application.logger.level" value="debug" />
