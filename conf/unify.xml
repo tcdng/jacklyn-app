@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE unify>
+<!DOCTYPE unify PUBLIC
+  "-//The Code Department//DTD Unify Container 2.0//EN"
+  "https://tcdng.com/dtd/unify-config_2_0.dtd">
 <!--
-  Copyright 2018-2019 The Code Department.
+  Copyright 2018-2020 The Code Department.
   
   Licensed under the Apache License, Version 2.0 (the "License"); you may not
   use this file except in compliance with the License. You may obtain a copy of
@@ -22,35 +24,46 @@
 	<!-- CONFIGURATION -->
 	<properties>
 		<property name="application.code" value="jacklyn-app" />
-		<property name="application.name" value="Jacklyn Application" />
+        <property name="application.name" value="Jacklyn Application" />
+        <!--property name="application.locale" value="en-GB" /-->
+        <!--property name="application.timezone" value="Africa/Lagos" /-->
+        <!--property name="application.colorscheme" value="gray" /-->
 		<property name="application.boot.component" value="jacklyn-bootservice" />
-		<property name="application.logger.toconsole" value="false" />
-		<property name="application.logger.level" value="info" />
+		<property name="application.logger.toconsole" value="true" />
+		<property name="application.logger.level" value="debug" />
 		<property name="application.layout">
-			<value>luna</value>
+            <value>luna</value>
+            <value>europa</value>
 		</property>
 		<property name="application.command.interface.enabled" value="true" />
 		<property name="application.command.interface.port" value="7081" />
 		<property name="application.interfaces">
-			<value>jetty-httpinterface</value>
+			<value>jetty-embeddedwebserver</value>
 		</property>
-		<property name="application.web.home" value="/application/home" />
-		<property name="application.web.remote.viewing.enabled" value="true" />
+        <property name="application.session.timeout" value="900" />
+        <property name="application.web.home" value="/application/home" />
+        <property name="application.web.common" value="/application/commonutilities" />
+		<property name="application.web.remote.viewing" value="true" />
 		<property name="application.web.remote.viewers">
-			<value>http://localhost:7010</value>
+            <value>http://localhost:7010</value>
 		</property>
-		<property name="application.web.session.timeout" value="900" />
-		<property name="application.web.document.stylesheet">
-			<value>$t{css/jacklyn.css}</value>
-		</property>
+        <property name="application.web.stylesheet">
+            <value>$t{css/jacklyn.css}</value>
+        </property>
+        <property name="application.web.script">
+            <value>web/js/jacklyn-web.js</value>
+        </property>
 		<property name="application.banner" value="web/banner/banner.txt" />
+        <!--property name="jacklyn.country.locale" value="en-NG" /-->
+        <property name="jacklyn.system.default.email" value="info@tcdng.com" />
+        <property name="jacklyn.administrator.default.email" value="info@tcdng.com" />
 	</properties>
 
 	<!-- COMPONENTS -->
 	<components>
 		<!-- Configure HTTP interface -->
-		<component name="jetty-httpinterface"
-			class="com.tcdng.unify.jetty.http.JettyHttpInterface">
+		<component name="jetty-embeddedwebserver"
+			class="com.tcdng.unify.jetty.http.JettyEmbeddedWebServer">
 			<properties>
 				<property name="contextPath" value="/jacklyn" />
 				<property name="httpPort" value="7080" />
@@ -61,7 +74,7 @@
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
                 <property name="driver" value="org.hsqldb.jdbcDriver" />
-                <property name="connectionUrl" value="jdbc:hsqldb:mem:test" />//
+                <property name="connectionUrl" value="jdbc:hsqldb:mem:test" />
                 <property name="appSchema" value="PUBLIC" />
                 <property name="getConnectionTimeout" value="4000" />
                 <property name="shutdownOnTerminate" value="true" />
@@ -72,7 +85,7 @@
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
                 <property name="driver" value="org.hsqldb.jdbcDriver" />
-                <property name="connectionUrl" value="jdbc:hsqldb:hsql://localhost/jacklyndb" />
+                <property name="connectionUrl" value="jdbc:hsqldb:hsql://<HOST>/<DATABASE>" />
                 <property name="appSchema" value="PUBLIC" />
                 <property name="username" value="<USERNAME>" />
                 <property name="password" value="<PASSWORD>" />
@@ -82,14 +95,47 @@
         <!--component name="application-datasource"
             class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
             <properties>
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+                <property name="connectionUrl" value="jdbc:sqlserver://<HOST>\SQLEXPRESS:57565" />
+                <property name="appSchema" value="dbo" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
+                <property name="dialect" value="mssql-dialect" />
+            </properties>
+        </component-->
+        <!--component name="application-datasource"
+            class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+            <properties>
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="connectionUrl" value="jdbc:mysql://localhost:3306/<DATABASE>" />//
+                <property name="connectionUrl" value="jdbc:mysql://<HOST>:3306/<DATABASE>" />//
                 <property name="appSchema" value="<DATABASE>" />
                 <property name="username" value="<USERNAME>" />
                 <property name="password" value="<PASSWORD>" />
                 <property name="getConnectionTimeout" value="4000" />
-                <property name="shutdownOnTerminate" value="true" />
                 <property name="dialect" value="mysql-dialect" />
+            </properties>
+        </component-->        
+        <!--component name="application-datasource"
+            class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+            <properties>
+                <property name="driver" value="oracle.jdbc.OracleDriver" />
+                <property name="connectionUrl" value="jdbc:oracle:thin:@//<HOST>:1521/<SID>" />
+                <property name="appSchema" value="<USERNAME>" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
+                <property name="dialect" value="oracle-dialect" />
+            </properties>
+        </component-->
+        <!--component name="application-datasource"
+            class="com.tcdng.unify.core.database.sql.SqlDataSourceImpl">
+            <properties>
+                <property name="driver" value="org.postgresql.Driver" />
+                <property name="connectionUrl" value="jdbc:postgresql://<HOST>:5432/<DATABASE>" />
+                <property name="appSchema" value="public" />
+                <property name="username" value="<USERNAME>" />
+                <property name="password" value="<PASSWORD>" />
+                <property name="getConnectionTimeout" value="4000" />
+                <property name="dialect" value="postgresql-dialect" />
             </properties>
         </component-->        
 	</components>

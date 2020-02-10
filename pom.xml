@@ -4,7 +4,7 @@
 
 	<groupId>com.tcdng.jacklyn</groupId>
 	<artifactId>jacklyn-app</artifactId>
-	<version>1.0.1</version>
+	<version>1.1.1</version>
 	<packaging>jar</packaging>
 
 	<name>jacklyn-app</name>
@@ -30,8 +30,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jacklyn.version>1.0.1</jacklyn.version>
-		<unify.version>1.0.2</unify.version>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<jacklyn.version>1.1.1</jacklyn.version>
+		<unify.version>1.1.1</unify.version>
 	</properties>
 
 	<build>
@@ -46,7 +48,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-                            <finalName>jacklyn-app-starter-${project.version}</finalName>
+							<finalName>jacklyn-app-starter-${project.version}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
 								<descriptor>assembly.xml</descriptor>
@@ -112,7 +114,17 @@
 		</dependency>
 		<dependency>
 			<groupId>com.tcdng.jacklyn</groupId>
+			<artifactId>jacklyn-integration</artifactId>
+			<version>${jacklyn.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tcdng.jacklyn</groupId>
 			<artifactId>jacklyn-system</artifactId>
+			<version>${jacklyn.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tcdng.jacklyn</groupId>
+			<artifactId>jacklyn-location</artifactId>
 			<version>${jacklyn.version}</version>
 		</dependency>
 		<dependency>
@@ -159,6 +171,16 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>6.1.0.jre7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4.1212</version>
 		</dependency>
 	</dependencies>
 </project>
