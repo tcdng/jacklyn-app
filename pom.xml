@@ -162,6 +162,11 @@
 			<artifactId>unify-xchart</artifactId>
 			<version>${unify.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>com.tcdng.unify</groupId>
+            <artifactId>unify-fontawesome</artifactId>
+            <version>${unify.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
