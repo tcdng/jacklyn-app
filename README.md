@@ -10,7 +10,7 @@ mvn clean package
 ```
 
 ### Quick Run
-* Download an already assembled runnable package here.
+* Download an already assembled runnable package  [here](https://github.com/tcdng/jacklyn-app/releases/download/1.1.2/jacklyn-app-starter-1.1.2.zip)
 * Extract downloaded package to a suitable folder and run startup.bat or startup.sh in folder ..\bin
 * Open a browser and enter http://localhost:7080/jacklyn into address the bar.
 * Login with login ID 'SYSTEM' and password 'system'.
