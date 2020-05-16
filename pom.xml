@@ -4,7 +4,7 @@
 
 	<groupId>com.tcdng.jacklyn</groupId>
 	<artifactId>jacklyn-app</artifactId>
-	<version>1.1.2</version>
+	<version>1.1.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>jacklyn-app</name>
@@ -32,8 +32,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
-		<jacklyn.version>1.1.2</jacklyn.version>
-		<unify.version>1.1.2</unify.version>
+		<jacklyn.version>1.1.3-SNAPSHOT</jacklyn.version>
+		<unify.version>1.1.3-SNAPSHOT</unify.version>
 	</properties>
 
 	<build>
