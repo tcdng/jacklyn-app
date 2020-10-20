@@ -4,7 +4,7 @@
 
 	<groupId>com.tcdng.jacklyn</groupId>
 	<artifactId>jacklyn-app</artifactId>
-	<version>1.1.4-SNAPSHOT</version>
+	<version>1.1.5-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>jacklyn-app</name>
@@ -32,8 +32,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
-		<jacklyn.version>1.1.4-SNAPSHOT</jacklyn.version>
-		<unify.version>1.1.4-SNAPSHOT</unify.version>
+		<jacklyn.version>1.1.5-SNAPSHOT</jacklyn.version>
+		<unify.version>2.0.0-SNAPSHOT</unify.version>
 	</properties>
 
 	<build>
@@ -140,6 +140,11 @@
 		<dependency>
 			<groupId>com.tcdng.unify</groupId>
 			<artifactId>unify-web</artifactId>
+			<version>${unify.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tcdng.unify</groupId>
+			<artifactId>unify-web-ui</artifactId>
 			<version>${unify.version}</version>
 		</dependency>
 		<dependency>
